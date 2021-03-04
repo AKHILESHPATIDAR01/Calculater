@@ -4,440 +4,160 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--========== BOX ICONS ==========-->
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <title>Calculator</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-color: rgb(19, 35, 49);
+            }
 
-        <!--========== CSS ==========-->
-        <link rel="stylesheet" href="style.css">
+            button{
+                width: 55px;
+                height: 55px;
+                font-size: 20px;
+                border: none;
+                margin: 4px;
+            }
 
-        <title>Responsive landing page</title>
+            .container{
+                background-color: white;
+                height: 430px;
+                width: 318px;
+                margin: 20px auto;
+                border-radius: 20px;
+                padding: 20px;
+            }
+
+            .display{
+                width: 100%;
+                height: 40px;
+                border: 1px solid rgb(244, 250, 250);
+                /* border-radius: 20px 20px 0 0; */
+                 font-size: 40px;
+                vertical-align: bottom;
+                text-align: right;
+                padding-right: 16px; 
+                /* padding-bottom: 20px; */
+             }
+            .display input{
+                width: 100%;
+                height: 100%;
+            } */
+
+            .displayInput{
+                width: 90%;
+                margin: 20px 13px 0;
+                border-radius: 5px;
+                font-size: 40px;
+            }
+
+            table{
+                margin: 1px auto;
+            }
+
+            input[type="button"]{
+                width: 55px;
+                height: 55px;
+                font-size: 20px;
+                border: none;
+                margin: 4px;
+            }
+
+            input[type="text"]{
+                width: 80%;
+                margin: 0 15px;
+                font-size: 25px;
+                padding: 5px;
+            }
+
+            .equal{
+                width: 93%;
+                height: 55px;
+                font-size: 20px;
+                border: none;
+                margin: 4px;
+            }
+        </style>
+        
     </head>
     <body>
-        <!--========== SCROLL TOP ==========-->
-        <a href="#" class="scrolltop" id="scroll-top">
-            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
-        </a>
-        
-        <!--========== HEADER ==========-->
-        <header class="l-header" id="header">
-            <nav class="nav bd-container">
-                <a href="#" class="nav__logo">Ecommerce</a>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#share" class="nav__link">Products</a></li>
-                        <li class="nav__item"><a href="#catagoryBox" class="nav__link">single-Product</a></li>
-                        <li class="nav__item"><a href="#accessory" class="nav__link">Accessory</a></li>
-
-                        <!-- <li class="nav__item"><a href="#accessory" class="nav__link"><i class='bx bx-cart'></i> <i class='bx bx-heart'> <i class='bx bx-user'></i> </i></a></li> -->
-                        <!-- <li class="nav__item"><a href="#accessory" class="nav__link"><i class='bx bx-heart'></i></a></li> -->
-                        <!-- <li class="nav__item"><a href="#accessory" class="nav__link"><i class='bx bx-user'></i></a></li> -->
-                        <li class="nav__item">
-                            <ul>
-                                <li><i class='bx bx-cart'></i></li>
-                                <li><i class='bx bx-heart'></i></li>
-                                <li><i class='bx bx-user'></i></li>
-                            </ul>
-                            <!-- <i class='bx bx-cart'></i>  <i class='bx bx-heart'></i> <i class='bx bx-user'></i> -->
-                        </li>
-                        
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-cart'></i>
-                    <i class='bx bx-user'></i>
-                    <i class='bx bx-grid-alt'></i>
-
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--========== HOME ==========-->
-            <section class="home" id="home">
-                <!-- <div class="home__container bd-container bd-grid">
-                        <h1 class="home__title">Choose Catagory</h1>
-                        <p class="home__description">Here we will display only those items for those you came to us.</p>
-                    </div>   
-                </div> -->
-
-                <!-- <h1 class="title">Choose-Catagory</h1> -->
-            </section>
-
-
-            <!--========== catagoryBox ==========-->
-
-            <!-- <section class="section bd-container">
-
-                <div class="catagoryBox__container bd-grid">
-                    <div class="catagoryBox__data">
-                        
-                        <h3 class="catagoryBox__title">Fashion</h3>
-                        <a href="#" class="button button-link">Go Shopping</a>
-                    </div>
-
-                    <div class="catagoryBox__data">
-                        
-                        <h3 class="catagoryBox__title">Mobiles</h3>
-                        <a href="#" class="button button-link">Go Shopping</a>
-                    </div>
-
-                    <div class="catagoryBox__data">
-                        
-                        <h3 class="catagoryBox__title">Electronics</h3>
-                        <a href="#" class="button button-link">Go Shopping</a>
-                    </div>
-                </div>
-                
-
-            </section> -->
-
+        <div class="container">
+            <input type="text" name="screen" id="input">
+                <br>
+                <div style="margin: 20px">
+                <button id="clr" >C</button></td>
+                <button id="block8" >8</button>
+                <button id="block9" >9</button>
+                <button id="block7" >7</button>
+                <button id="multiply" >X</button>
+                <button id="block4" >4</button>
+                <button id="block5" >5</button>
+                <button id="block6" >6</button>
+                <button id="minus" >-</button> 
+           
+                <button id="block1" >1</button>
+                <button id="block2" >2</button>
+                <button id="block3" >3</button>
+                <button id="plus" >+</button>
             
-
-            <div class = "products">
-                <div class = "container">
-                    <h1 class = "lg-title">Choose Catagory</h1>
-                    <!-- <p class = "text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quos sit consectetur, ipsa voluptatem vitae necessitatibus dicta veniam, optio, possimus assumenda laudantium. Temporibus, quis cum.</p> -->
-    
-                    <div class = "product-items">
-                        <!-- single product -->
-                        <!-- <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> add to cart
-                                        <span><i class='bx bx-link-external'></i></span>
-                                    </button>
-                                    <button type = "button" class = "btn-buy"> buy now
-                                        <span><i class = "fas fa-shopping-cart"></i></span>
-                                    </button>
-                                </div>
-                            </div>
-    
-                            <div class = "product-info">
-                                <div class = "product-info-top">
-                                    <h2 class = "sm-title">lifestyle</h2>
-                                    <div class = "rating">
-                                        <span><i class='bx bx-star'></i></span>
-                                        <span><i class='bx bx-star'></i></span>
-                                        <span><i class='bx bx-star'></i></span>
-                                        <span><i class='bx bx-star'></i></span>
-                                        <span><i class='bx bx-star'></i></span>
-                                    </div>
-                                </div>
-                                <a href = "#" class = "product-name">mens shoes DN 23XX, new product</a>
-                                <p class = "product-price">$ 150.00</p>
-                                <p class = "product-price">$ 133.00</p>
-                            </div>
-    
-                            <div class = "off-info">
-                                <h2 class = "sm-title">25% off</h2>
-                            </div>
-                        </div> -->
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Fashion</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart">
-                                        <a href="shoppingpage.html">Shopping </a>
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Mobiles</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Electronics</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Decore</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Appliances</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Beauty</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Foods</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Drinks</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Health Care</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Baby Care</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Toys</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Sports</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Books</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Music</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Stationary</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class = "product">
-                            <div class = "product-content">
-                                <div class = "product-img">
-                                    <img src = "images/banner.png" alt = "product image">
-                                    <p>Hair Care</p>
-                                </div>
-                                <div class = "product-btns">
-                                    <button type = "button" class = "btn-cart"> Shopping
-                                        <!-- <span><i class='bx bx-link-external'></i></span> -->
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        
-
-
-
-
-
-                    </div> 
-
+                <button id="block0" >0</button>
+                <button id="dot" >.</button>
+                <button id="divide" >/</button>
+                <button class="equal" id="ans" >=</button>
                 </div>
             </div>
-
-            
-
-            <!-- 
-            Fashion
-            Mobiles
-            Electronics
-            Home Decore
-            Appliances
-            Beauty
-            Foods
-            Drinks
-            Health Care
-            Baby Care
-            Toys
-            Sports
-            Books 
-            Music
-            Stationary
-            Hair Care
-
-             -->
-
-       </main>    
-
-       
-        <!--========== SCROLL REVEAL ==========-->
-        <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-
-        <!--========== MAIN JS ==========-->
-        <script src="main.js"></script>
+        </div>
+        
     </body>
+    <script>
+        var screen = document.getElementById("input");
+        var buttons = document.querySelectorAll('button');
+        var screenValue="";
+        for(var item of buttons){
+           item.addEventListener('click',(num)=>{
+                var button = num.target.innerText;
+                if(button=="X"){
+                    button='*';
+                    screenValue += button;
+                    screen.value = screenValue;
+                }
+                else if(button=="C"){
+                    screenValue =""
+                    screen.value = screenValue;
+                }
+                else if(button=="="){
+                    screen.value = eval(screenValue);
+                }
+                else{
+                    screenValue += button;
+                    screen.value = screenValue;
+                }
+           })
+        }
+
+        // let x = document.getElementById("input");
+        // let y=""
+        // function insertVal(value){
+        //             // console.log(x.value);
+        //             if(value == "C"){
+        //                 y="";
+        //                 x.value = y;
+        //             }
+        //             else if(value == "="){
+        //                 var exp = x.value;
+        //                 if(exp){
+        //                     x.value = eval(x.value);
+        //                 }
+        //            }
+        //             else{
+
+        //                     x.value = x.value +value;
+        //                     y+=value;
+        //             }
+        // }    
+    </script>
 </html>
 
